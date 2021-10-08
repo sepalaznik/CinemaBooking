@@ -1,6 +1,6 @@
 ﻿# Cайт кинотеатра
 
-https://github.com/sepalaznik/Melody.git
+https://github.com/sepalaznik/CinemaBooking.git
 
 Учебный проект Glo Academy, онлайн-курс Артёма Исламова.
 
