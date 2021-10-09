@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Cinema Booking</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -13,22 +14,53 @@
 </head>
 
 <body>
-<header class="header container">
-    <a href="/">
-        <img src="assets/images/logo.svg" alt="Cinema Booking">
-    </a>
-    <nav>
-        <a href="/">Главная</a>
-        <a href="/">Фильмы</a>
-        <a href="/">Кинотеатры</a>
-        <a href="/">События</a>
-        <a href="/">Поддержка</a>
-    </nav>
-    <div class="user">
-        <span>Привет, Котик</span>
-        <img class="avatar" src="./assets/images/my-avatar.png" alt="User Account">
-    </div>
-</header>
-<section class=""></section>
+
+    <header class="header">
+        <div class="navbar container">
+            <a href="/">
+                <img src="assets/images/logo.svg" alt="Cinema Booking">
+            </a>
+            <nav>
+                <a href="/">Главная</a>
+                <a href="/">Фильмы</a>
+                <a href="/">Кинотеатры</a>
+                <a href="/">События</a>
+                <a href="/">Поддержка</a>
+            </nav>
+            <div class="user">
+                <span>Привет, Котэ</span>
+                <img class="avatar" src="./assets/images/my-avatar.png" alt="User Account">
+            </div>
+        </div>
+        <div class="container movie-content">
+            <div class="movie-info">
+                <span class="movie-title-en">Avengers: Infinity War</span>
+                <h1 class="movie-title-ru">Мстители: война бесконечности</h1>
+                <p class="movie-title-description">Пока Мстители и их союзники продолжают защищать мир от различных опасностей,
+                    с которыми не смог бы справиться один супергерой, новая угроза возникает из космоса:
+                    Танос. Межгалактический тиран преследует цель собрать все шесть Камней Бесконечности -
+                    артефакты невероятной силы, с помощью которых можно менять реальность по своему желанию.
+                    Всё, с чем Мстители сталкивались ранее, вело к этому моменту – судьба Земли
+                    никогда ещё не была столь неопределённой.
+                </p>
+                <div class="movie-details">
+                    <div class="time">
+                        <img src="./assets/images/clock 1.svg" alt="Time">
+                        <span>240 мин.</span>
+                    </div>
+                    <div class="rating">
+                        <img src="./assets/images/imdb.png" alt="Rating">
+                        <span><b>9.2</b> / 10</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="movie-promo">
+                <img src="./assets/images/play-button.svg" alt="">
+            </a>
+        </div>
+    </header>
+    
+    <section class="container"></section>
 </body>
+
 </html>

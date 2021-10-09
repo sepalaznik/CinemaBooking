@@ -1,16 +1,23 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #621402;
-    background-image: url("../images/bg.png");
-    background-position: center 0;
-    background-repeat: no-repeat;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(98, 20, 2);
 }
-
 .container {
     max-width: 1170px;
     margin: 0 auto;
 }
+
 header {
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, rgb(98, 20, 2) 85.62%),
+        url("../images/bg.png");
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,12 +28,11 @@ nav {
     padding-left: 57px;
 }
 nav a {
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin-right: 25px;
 }
 .user {
-    color: #ffffff;
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -38,4 +44,54 @@ nav a {
     border-radius: 50px;
     overflow: hidden;
     margin-left: 11px;
+}
+
+.movie-content {
+    padding: 60px 0;
+    display: flex;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+.movie-info {
+    width: 50%;
+}
+.movie-info .movie-title-en {
+    opacity: 0.5;
+    font-size: 24px;
+    line-height: 36px;
+}
+.movie-info h1 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 11px;
+    margin-bottom: 23px;
+}
+.movie-info p {
+    line-height: 1.6;
+}
+.movie-details {
+    margin-top: 50px;
+    display: flex;
+}
+.time {
+    display: flex;
+    align-items: center;
+    margin-right: 34px;
+}
+.time img, .rating img {
+    margin-right: 14px;
+}
+.rating {
+    display: flex;
+    align-items: center;
+}
+.rating span b {
+    font-size: 24px;
+}
+
+
+.movie-promo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
