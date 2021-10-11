@@ -9,6 +9,9 @@ https://github.com/sepalaznik/CinemaBooking.git
 Для реализации проекта использованы:
 - html ES6,
 - css, 
-- figma.
+- js,
+- figma,
+- fancybox,
+- адаптивная вёрстка.
 
-https://glo-academy.org/pl/teach/control/lesson/view?id=219055406&editMode=0
+По сравнению с исходным макетом, добавлены возможность выбора даты и создание виртуального чека оплаты.

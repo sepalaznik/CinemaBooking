@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: rgb(255, 255, 255);
-    background-color: rgb(98, 20, 2);
+    background-color: rgb(100, 20, 2);
 }
 .container {
     max-width: 1170px;
@@ -10,12 +10,12 @@ body {
 }
 
 header {
-    height: 100vh;
     background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, rgb(98, 20, 2) 85.62%),
         url("../images/bg.png");
     background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 62px;
 }
 .navbar {
     display: flex;
@@ -23,11 +23,17 @@ header {
     justify-content: space-between;
     padding: 30px 0;
 }
-nav {
-    display: flex;
-    padding-left: 57px;
+.menu {
+    margin-left: 57px;
+    position: relative;
 }
-nav a {
+.m-menu {
+    display: none;
+}
+.nav {
+    display: flex;
+}
+.nav a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin-right: 25px;
@@ -47,9 +53,9 @@ nav a {
 }
 
 .movie-content {
-    padding: 60px 0;
+    padding: 62px 0;
     display: flex;
-    border-bottom: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .movie-info {
     width: 50%;
@@ -87,11 +93,274 @@ nav a {
 .rating span b {
     font-size: 24px;
 }
-
-
 .movie-promo {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.session-content {
+    padding-top: 46px;
+    padding-bottom: 62px;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 62px;
+}
+.session-label {
+    display: block;
+    margin-bottom: 20px;
+}
+.session-date-block {
+    display: flex;
+    column-gap: 15px;
+}
+.session-date-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    width: 90px;
+    height: 90px;
+    transition: background-color 0.2s, color 0.2s;
+}
+.session-date-item:hover {
+    background-color: rgba(254, 142, 5, 0.5);
+    color: rgb(38, 20, 2);
+}
+.session-date-item.selected {
+    background-color: rgb(254, 142, 5);
+    color: rgb(38, 20, 2);
+}
+.session-date-month {
+    line-height: 19px;
+}
+.session-date-day {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+}
+.session-date-week {
+    font-size: 19px;
+    line-height: 22px;
+}
+.session-cinemas {
+    flex-basis: 100%;
+}
+.select-cinemas, .select-time {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    padding: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.select-cinemas {
+    width: 100%;
+}
+.option-selects {
+    background-color: #641402;
+}
+.odeum-scheme {
+    background: rgba(36, 36, 36, 0.18);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.odeum-scheme svg {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+.odeum-scheme path:not(.screen-light) {
+    fill: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+.odeum-scheme path:not(.screen-light):hover {
+    fill: rgba(255, 255, 255, 0.502);
+}
+.odeum-scheme path.booked, .odeum-scheme path.booked:hover {
+    fill: rgba(255, 255, 255, 0.05);
+    cursor: default;
+}
+.odeum-scheme path.active, .odeum-scheme path.active:hover {
+    fill:  rgb(254, 142, 5);
+}
+.legend {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    max-width: 1024px;
+    width: 87%;
+    margin: auto;
+    padding-top: 22px;
+    padding-bottom: 38px;
+}
+.legend-label {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.legend-label img {
+    margin-right: 15px;
+}
+.price {
+    padding-top: 46px;
+    padding-bottom: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ticket-count-label {
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+}
+.ticket-count, .price-count {
+    font-size: 52px;
+}
+.unit {
+    font-size: 26px;
+}
+.button-pay {
+    background-color: rgb(254, 142, 5);
+    border: none;
+    border-radius: 8px;
+    padding: 24px 52px;
+    color:rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+@media (max-width: 1170px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .nav a {
+        margin-right: 15px;
+    }
+    .session-content {
+        flex-wrap: wrap;
+    }
+    .session-cinemas {
+        order: 3;
+    }
+    .session-time {
+        order: 2;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        max-width: 540px;
+    }
+    .menu {
+        margin-left: 27px;
+    }
+    .m-menu {
+        display: block;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    .nav {
+        position: absolute;
+        left: 32px;
+        top: -4px;
+        flex-direction: column;
+        z-index: 3;
+        visibility: hidden;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.4s, transform 0.4s;
+    }
+    .nav a {
+        margin-bottom: 6px;
+    }
+    .is-open {
+        visibility: visible;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .select-cinemas, .select-time {
+        margin-top: 0;
+    }
+    .session-cinemas {
+        flex-basis: 66%;
+    }
+    .odeum-scheme {
+        overflow-x: auto;
+    }
+    .odeum-scheme svg {
+        width: 700px;
+    }
+    .ticket-count-label {
+        font-size: 16px;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 480px;
+    }
+    .movie-content {
+        flex-wrap: wrap;
+    }
+    .movie-info, .movie-promo {
+        width: 100%;
+    }
+    .movie-promo {
+        padding-top: 46px;
+    } 
+    .session-date-item {
+        width: 75px;
+        height: 75px;
+    }
+    .session-date-day {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .session-date-week {
+        font-size: 14px;
+    }
+    .legend {
+        flex-wrap: wrap;
+    }
+    .legend-label {
+        flex-basis: 50%;
+        margin: 10px auto;
+    }
+    .price a {
+        flex-basis: 100%;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 360px;
+    }
+    .session-date-block {
+        column-gap: 5px
+    }
+    .session-cinemas {
+        flex-basis: 100%;
+    }
 }
