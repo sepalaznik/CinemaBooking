@@ -46,6 +46,9 @@ payOrder.addEventListener('click', () => {
     selectedSeats.forEach((seat) => {
         seat.classList.remove("active");
         seat.classList.add("booked");
+        selectDate.forEach((element) => {
+            element.classList.remove("selected")
+        });
         priceCount.textContent = 0;
         ticketCount.textContent = 0;
     })
