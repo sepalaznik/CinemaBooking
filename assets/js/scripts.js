@@ -15,7 +15,6 @@ schemeSvg.addEventListener("click", (event) => {
     }
 });
 
-
 // выбор даты:
 const selectDate = document.querySelectorAll(".session-date-item");
 
@@ -28,6 +27,7 @@ selectDate.forEach((item) => {
     })
 });
 
+
 // минимизация меню:
 const menuButton = document.querySelector(".m-menu");
 const menuMini = document.querySelector("nav");
@@ -38,11 +38,36 @@ menuButton.addEventListener("click", () => {
 
 // виртуальный чек оплаты и очистка формы:
 const payOrder = document.querySelector(".button-pay");
-
+function getValueCinemas() {
+    let selectCinemas = document.querySelector(".select-cinemas");
+    let cinemasTitle = selectCinemas.value;
+    return cinemasTitle;
+};
+function getValueTime() {
+    let selectTime = document.querySelector(".select-time");
+    let sessionTime = selectTime.value;
+    return sessionTime;
+};
+function getValueDate() {
+    let sessionMonth = document.querySelector(".selected").children[0].textContent.toLowerCase();
+    let sessionDay = document.querySelector(".selected").children[1].textContent;
+    let sessionDate = sessionDay + " " + sessionMonth;
+    return sessionDate;
+};
 payOrder.addEventListener('click', () => {
     const selectedSeats = document.querySelectorAll(".active");
-
-    alert("Куплено билетов: " + ticketCount.textContent + ". Сумма оплаты: " + priceCount.textContent + " рублей. Оплата прошла успешно");
+    let movieTitle = document.querySelector(".movie-title-ru").textContent;
+    let order = {
+        movie: movieTitle,
+        cinemas: getValueCinemas(),
+        day: getValueDate(),
+        time: getValueTime(),
+        tickets: ticketCount.textContent,
+        payment: priceCount.textContent
+    }
+    
+    alert(" Фильм: " + order.movie + ". \n Кинотеатр: " + order.cinemas + ". \n Сеанс: " + order.day + ", " + order.time + ". \n Куплено билетов: " + order.tickets + ". \n Сумма оплаты: " + order.payment + " рублей. \n Оплата прошла успешно");
+    
     selectedSeats.forEach((seat) => {
         seat.classList.remove("active");
         seat.classList.add("booked");
@@ -52,5 +77,4 @@ payOrder.addEventListener('click', () => {
         priceCount.textContent = 0;
         ticketCount.textContent = 0;
     })
-
 });
